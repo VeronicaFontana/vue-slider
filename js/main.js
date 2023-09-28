@@ -35,7 +35,8 @@ createApp({
         "img/05.webp"
       ],
 
-      counter: 0
+      counter: 0,
+      interval: null
     }
   },
 
@@ -57,14 +58,15 @@ createApp({
     },
 
     autoScroll(isScroll){
-      setInterval(function(){
-        if(isScroll){
+      if(isScroll){
+        this.interval = setInterval(function(){
           this.counter++;
-        }
-        console.log(this.counter);
-      }, 3000)
+          console.log(this.counter);
+        }, 3000)
+      }else{
+        clearInterval(this.interval);
+        console.log("stop");
+      }
     }
   }
-
-
 }).mount("#app")

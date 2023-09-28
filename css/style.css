@@ -17,18 +17,14 @@
   box-shadow: 0 0 3px black;
 }
 
-.btn-next{
+.btn-prev{
   right: 100px;
   top: 10px;
 }
 
-.btn-prev{
+.btn-next{
   right: 100px;
   bottom: 10px;
-}
-
-.hide{
-  display: none;
 }
 
 .items-wrapper .items{
