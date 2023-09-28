@@ -26,7 +26,7 @@
         <div class="slider d-flex justify-content-center  h-100 w-100 mx-auto position-relative"> 
           
           <div class="items-wrapper col-9 h-100 position-relative">
-            <div class ="items hide">
+            <div class ="items">
               <img :src = "images[counter]">
               <div class="text">
                 <h2>{{games.title}}</h2>
@@ -37,7 +37,7 @@
 
           <div class="col-3 thumb-box d-flex flex-column position-relative">
             <div  class="thumb">
-              <img v-for="(image, index) in images" :src = "image" >
+              <img v-for="(image, index) in images" :src="image" :class="{active: counter === index}"> 
             </div>
           </div>
 
