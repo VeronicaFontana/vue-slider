@@ -43,6 +43,7 @@ createApp({
     nextPrev(isNext){
       if(isNext){
         this.counter++;
+        console.log(this.counter);
       }else{
         this.counter--;
       }
@@ -53,6 +54,15 @@ createApp({
       if(this.counter < 0){
         this.counter = this.images.length - 1;
       }
+    },
+
+    autoScroll(isScroll){
+      setInterval(function(){
+        if(isScroll){
+          this.counter++;
+        }
+        console.log(this.counter);
+      }, 3000)
     }
   }
 
