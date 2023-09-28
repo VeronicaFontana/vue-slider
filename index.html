@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://kit.fontawesome.com/66b933bf5d.js" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <title>Carousel</title>
+</head>
+<body>
+  
+  <section id="app" class="main-wrapper d-flex flex-column  align-items-center justify-content-center vh-100 ">
+    <div class="my-3">
+      <button class="auto-scroll">Auto Scroll</button>
+    </div>
+    
+    <div class="container">
+        <div class="slider d-flex justify-content-center  h-100 w-100 mx-auto position-relative"> 
+          
+          <div class="items-wrapper col-9 h-100 position-relative">
+            <div class ="items hide">
+              <img :src = "images[counter]">
+              <div class="text">
+                <h2>{{games.title}}</h2>
+                <p>{{games.text}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3 thumb-box d-flex flex-column position-relative">
+            <div  class="thumb">
+              <img v-for="(image, index) in images" :src = "image" >
+            </div>
+          </div>
+
+          <div class="btn-up position-absolute"><i class="fa-solid fa-arrow-up"></i></div>
+          <div class="btn-down position-absolute"><i class="fa-solid fa-arrow-down"></i></div>
+
+        </div>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+</html>

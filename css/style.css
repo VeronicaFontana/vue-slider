@@ -1,0 +1,61 @@
+.main-wrapper{
+  background-color: rgb(154, 154, 247);
+}
+
+.container{
+  height: 60%;
+}
+
+.btn-up, .btn-down{
+  background-color: rgba(255, 255, 255, 0.451);
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.btn-up:hover, .btn-down:hover{
+  cursor:pointer;
+  box-shadow: 0 0 3px black;
+}
+
+.btn-up{
+  right: 100px;
+  top: 10px;
+}
+
+.btn-down{
+  right: 100px;
+  bottom: 10px;
+}
+
+.hide{
+  display: none;
+}
+
+.items-wrapper .items{
+  height: 100%;
+  width: 100%;
+}
+
+
+.items-wrapper div img, .thumb img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: white;
+  text-align: end;
+}
+
+.thumb{
+  width: 100%;
+  height: calc(100% / 5);
+}
+
+.active{
+  border: 3px solid white;
+}
