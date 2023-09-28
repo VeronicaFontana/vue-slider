@@ -62,11 +62,19 @@ createApp({
         this.interval = setInterval(function(){
           this.counter++;
           console.log(this.counter);
+
+          if(this.counter === this.images.length){
+            this.counter = 0;
+          }
+          if(this.counter < 0){
+            this.counter = this.images.length - 1;
+          }
         }, 3000)
       }else{
         clearInterval(this.interval);
         console.log("stop");
       }
+
     }
   }
 }).mount("#app")
