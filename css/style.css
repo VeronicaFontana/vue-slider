@@ -6,23 +6,23 @@
   height: 60%;
 }
 
-.btn-up, .btn-down{
+.btn-next, .btn-prev{
   background-color: rgba(255, 255, 255, 0.451);
   padding: 10px 15px;
   border-radius: 50%;
 }
 
-.btn-up:hover, .btn-down:hover{
+.btn-next:hover, .btn-prev:hover{
   cursor:pointer;
   box-shadow: 0 0 3px black;
 }
 
-.btn-up{
+.btn-next{
   right: 100px;
   top: 10px;
 }
 
-.btn-down{
+.btn-prev{
   right: 100px;
   bottom: 10px;
 }
@@ -54,6 +54,10 @@
 .thumb{
   width: 100%;
   height: calc(100% / 5);
+}
+
+.thumb:hover{
+  cursor:pointer;
 }
 
 .active{
