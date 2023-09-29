@@ -44,7 +44,6 @@ createApp({
     nextPrev(isNext){
       if(isNext){
         this.counter++;
-        console.log(this.counter);
       }else{
         this.counter--;
       }
@@ -59,7 +58,7 @@ createApp({
 
     autoScroll(isScroll){
       if(isScroll){
-        this.interval = setInterval(function(){
+        this.interval = setInterval(() => {
           this.counter++;
           console.log(this.counter);
 
@@ -74,7 +73,7 @@ createApp({
         clearInterval(this.interval);
         console.log("stop");
       }
-
     }
   }
 }).mount("#app")
+
